@@ -1,0 +1,23 @@
+{
+  "name": "vaanilai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actionanand/vaanilai.git"
+  },
+  "keywords": [],
+  "author": "Anand Raja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actionanand/vaanilai/issues"
+  },
+  "homepage": "https://github.com/actionanand/vaanilai#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
