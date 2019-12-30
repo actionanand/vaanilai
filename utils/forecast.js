@@ -8,11 +8,12 @@ const forecast = (lat, lng, callback) => {
         } else if (response.body.error) {
             callback('Unable to find the location, please try different location!', undefined);
         } else {
-            callback(undefined, {
-                summary: response.body.daily.data[0].summary,
-                currentTemp: response.body.currently.temperature,
-                precipProbability: response.body.currently.precipProbability
-            });
+            summary = response.body.daily.data[0].summary;
+            currentTemp = response.body.currently.temperature;
+            precipProbability = response.body.currently.precipProbability;
+            forecastInfo = `${summary} Current temperature is ${currentTemp} degree F and there is ${precipProbability} % posibility for rain.`;
+            
+            callback(undefined, forecastInfo);
         }
     });
 }

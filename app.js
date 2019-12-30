@@ -5,11 +5,14 @@ const forecast = require('./utils/forecast');
 
 
 geoCode('nagercoil', (error, data) => {
-    console.log('Error: ', error);
-    console.log('Data: ', data);
-});
-
-forecast(8.17, 77.43, (error, data) => {
-    console.log('Error: ', error);
-    console.log('Data: ', data);   
+    if (error) {
+        return console.log(error);
+    }
+    forecast(data.lat, data.lng, (error, respData) => {
+        if (error) {
+            console.log(error);
+        }
+        console.log(data.location);
+        console.log(respData);
+    });
 });
